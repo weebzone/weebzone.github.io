@@ -22,27 +22,27 @@ enableEmoji = true
     name = "Docs" 
     url = "/docs/"
     identifier = "docs"
-    weight = 10
+    weight = 5
 
 [params]
 
   google_fonts = [
-    ["Exo 2", "300, 400, 600, 700"],
+    ["Inter", "300, 400, 600, 700"],
     ["Fira Code", "500, 700"]
   ]
 
-  sans_serif_font = "Exo 2"
-  secondary_font  = "Exo 2"
+  sans_serif_font = "Inter"
+  secondary_font  = "Inter"
 
     [params.footer]
-        copyright = "© :YEAR: WZML-X"
+        copyright = "© :YEAR: WZML-X. All Rights Reserved"
         version   = true
 
     [params.social]
         github = "weebzone/WZML-X"
 
     [params.docs]
-        title           = "Lotus Docs"                        # default html title for documentation pages/sections
+        title           = "WZML-X Guide & Docs"                        # default html title for documentation pages/sections
         # pathName        = "docs"                            # path for documentation site | default "docs"
         themeColor      = "cyan"                              # (optional) - Set theme accent colour. Options include: blue (default), green, red, yellow, emerald, cardinal, magenta, cyan
         darkMode        = true                                # enable dark mode option? default false
@@ -52,7 +52,7 @@ enableEmoji = true
         # gitinfo
         repoURL         = "https://github.com/weebzone/WZML-X"  # Git repository URL for your site [support for GitHub, GitLab, and BitBucket]
         repoBranch      = "master"                           # Name of your Git repository branch
-        editPage        = false                                # enable 'Edit this page' feature - default false
+        editPage        = true                                # enable 'Edit this page' feature - default false
         lastMod         = true                                # enable 'Last modified' date on pages - default false
         lastModRelative = true                                # format 'Last modified' time as relative - default true
 
