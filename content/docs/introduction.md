@@ -2,8 +2,7 @@
 weight: 100
 title: "Introduction"
 icon: "newspaper"
-toc: true
-date: "2024-01-05T00:59:22+05:30"
+date: "2024-01-05T07:55:22+05:30"
 draft: false
 author: "SilentDemonSD"
 description: "Introduction to Telegram, WZML-X Usage and Needs."
