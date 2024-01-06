@@ -1,0 +1,52 @@
+# Hero
+hero:
+  enable: true
+  weight: 5
+  template: hero
+
+  backgroundImage:
+    path: "images/templates/hero"
+    filename:
+      desktop: "gradient-desktop.webp"
+      mobile: "gradient-mobile.webp"
+
+  badge:
+    text: v1.3.3
+    color: success # primary, secondary, success, danger, warning, info, light, dark
+    pill: true # boolean
+    soft: true # boolean
+
+  titleLogo:
+    path: "images/logos"
+    filename: "title_logo.png"
+    alt: "WZML-X Logo"
+    height: 80px
+
+  title: "WZML-X"
+  subtitle: A lightweight, **modern documentation** theme for Hugo. Easily customised for building **fast**, **secure**, and **SEO-friendly** documentation sites.
+  info: "**Open Source** under AGPL License."
+
+  image:
+    path: "images" # path to image under configured assets directory. default 'images'
+    filename: "lotus_docs_screenshot.png" # filename of your hero image (including file extension)
+    alt: "WZML-X Bot Screenshot" # Optional but recommended
+    boxShadow: true # default 'false' (excludes .svg images)
+    rounded: true # round the image corners? default 'false' (excludes .svg images)
+
+  ctaButton:
+    icon: rocket_launch
+    btnText: "Get Started"
+    url: "/docs/"
+  cta2Button:
+    icon: construction
+    btnText: "Deploy Now"
+    url: "https://github.com/weebzone/WZML-X"
+
+imageCompare:
+  enable: false
+  
+imageText:
+  enable: true
+  weight: 20
+  template: imageText
+
