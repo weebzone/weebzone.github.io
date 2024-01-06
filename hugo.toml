@@ -50,9 +50,9 @@ enableEmoji = true
         # prismTheme      = "lotusdocs"                         # (optional) - Set theme for PrismJS. Options include: lotusdocs (default), solarized-light, twilight, lucario
 
         # gitinfo
-        repoURL         = "https://github.com/weebzone/WZML-X"  # Git repository URL for your site [support for GitHub, GitLab, and BitBucket]
-        repoBranch      = "master"                           # Name of your Git repository branch
-        editPage        = true                                # enable 'Edit this page' feature - default false
+        repoURL         = "https://github.com/weebzone/weebzone.github.io"  # Git repository URL for your site [support for GitHub, GitLab, and BitBucket]
+        repoBranch      = "main"                           # Name of your Git repository branch
+        editPage        = false                                # enable 'Edit this page' feature - default false
         lastMod         = true                                # enable 'Last modified' date on pages - default false
         lastModRelative = true                                # format 'Last modified' time as relative - default true
 
