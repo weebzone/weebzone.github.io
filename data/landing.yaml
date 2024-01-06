@@ -50,5 +50,5 @@ imageCompare:
 imageText:
   enable: true
   weight: 20
-  template: imageText
+  template: image text
 
