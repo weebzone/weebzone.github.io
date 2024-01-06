@@ -46,9 +46,3 @@ imageCompare:
   enable: false
   weight: 40
   template: image compare
-  
-imageText:
-  enable: true
-  weight: 20
-  template: image text
-
