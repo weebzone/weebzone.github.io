@@ -42,7 +42,3 @@ hero:
     btnText: "Deploy Now"
     url: "https://github.com/weebzone/WZML-X"
 
-imageCompare:
-  enable: false
-  weight: 40
-  template: image compare
