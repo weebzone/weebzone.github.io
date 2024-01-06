@@ -44,6 +44,8 @@ hero:
 
 imageCompare:
   enable: false
+  weight: 40
+  template: image compare
   
 imageText:
   enable: true
