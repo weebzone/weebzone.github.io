@@ -234,7 +234,7 @@ function vlc_player() {
 function mx_player() {
     const openstreamlink = streamlink;
     const filename = file_name.textContent;
-    const openMx = `intent:#Intent;action=com.mxtech.videoplayer.ad;S.title=${filename};S.url=${openstreamlink};end`;
+    const openMx = `intent:${openstreamlink}#Intent;package=com.mxtech.videoplayer.ad;S.title=${filename};end`;
     window.location.href = openMx;
 }
 
