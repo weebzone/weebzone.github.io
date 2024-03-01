@@ -248,14 +248,6 @@ function streamDownload() {
   window.location.href = openstreamlink;
 }
 
-function DM_Download() {
-  const openstreamlink = streamlink;
-  const openIDM = `intent:${openstreamlink}#Intent;component=idm.internet.download.manager/idm.internet.download.manager.Downloader;end`;
-  window.location.href = openIDM;
-}
-
-
-
 function copyStreamLink() {
   const linkToCopy = streamlink.toLowerCase();
 
