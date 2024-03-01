@@ -237,6 +237,12 @@ function mx_player() {
     const openMx = `intent:${openstreamlink}#Intent;package=com.mxtech.videoplayer.ad;S.title=${filename};end`;
     window.location.href = openMx;
 }
+function mx_player_pro() {
+    const openstreamlink = streamlink;
+    const filename = file_name.textContent;
+    const openMx = `intent:${openstreamlink}#Intent;package=com.mxtech.videoplayer.pro;S.title=${filename};end`;
+    window.location.href = openMx;
+}
 
 
 function n_player() {
