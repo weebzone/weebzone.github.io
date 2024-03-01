@@ -170,10 +170,10 @@ function toggleWidthnav(element) {
     wlcm.classList.add('active');
 }
 
-// if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
-//     Shery.mouseFollower();
-//     Shery.makeMagnet(".magnet");
-// }
+if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+    Shery.mouseFollower();
+    Shery.makeMagnet(".magnet");
+}
 
 
 // file name showing 
@@ -205,21 +205,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // disabling right click
-document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-});
-document.addEventListener('keydown', function (e) {
-    if (
-        e.key === 'F12' ||
-        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
-        (e.ctrlKey && e.key === 'u') ||
-        e.ctrlKey ||
-        e.shiftKey ||
-        e.altKey
-    ) {
-        e.preventDefault();
-    }
-});
+// document.addEventListener("contextmenu", function (e) {
+//     e.preventDefault();
+// });
+// document.addEventListener('keydown', function (e) {
+//     if (
+//         e.key === 'F12' ||
+//         (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+//         (e.ctrlKey && e.key === 'u') ||
+//         e.ctrlKey ||
+//         e.shiftKey ||
+//         e.altKey
+//     ) {
+//         e.preventDefault();
+//     }
+// });
 
 
 const videolink = window.location.href;
@@ -233,9 +233,11 @@ function vlc_player() {
 
 function mx_player() {
     const openstreamlink = streamlink;
-    const openMx = `intent:${openstreamlink}#Intent;package=com.mxtech.videoplayer.ad;S.title=${file_name};end`;
+    const filename = file_name.textContent;
+    const openMx = `intent:#Intent;action=com.mxtech.videoplayer.ad;S.title=${filename};S.url=${openstreamlink};end`;
     window.location.href = openMx;
 }
+
 
 function n_player() {
     const openstreamlink = streamlink;
