@@ -205,21 +205,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // disabling right click
-// document.addEventListener("contextmenu", function (e) {
-//     e.preventDefault();
-// });
-// document.addEventListener('keydown', function (e) {
-//     if (
-//         e.key === 'F12' ||
-//         (e.ctrlKey && e.shiftKey && e.key === 'I') ||
-//         (e.ctrlKey && e.key === 'u') ||
-//         e.ctrlKey ||
-//         e.shiftKey ||
-//         e.altKey
-//     ) {
-//         e.preventDefault();
-//     }
-// });
+document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+});
+document.addEventListener('keydown', function (e) {
+    if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.key === 'u') ||
+        e.ctrlKey ||
+        e.shiftKey ||
+        e.altKey
+    ) {
+        e.preventDefault();
+    }
+});
 
 
 const videolink = window.location.href;
@@ -233,17 +233,9 @@ function vlc_player() {
 
 function mx_player() {
     const openstreamlink = streamlink;
-    const filename = file_name.textContent;
-    const openMx = `intent:${openstreamlink}#Intent;package=com.mxtech.videoplayer.ad;S.title=${filename};end`;
+    const openMx = `intent:${openstreamlink}#Intent;package=com.mxtech.videoplayer.ad;end`;
     window.location.href = openMx;
 }
-function mx_player_pro() {
-    const openstreamlink = streamlink;
-    const filename = file_name.textContent;
-    const openMx = `intent:${openstreamlink}#Intent;package=com.mxtech.videoplayer.pro;S.title=${filename};end`;
-    window.location.href = openMx;
-}
-
 
 function n_player() {
     const openstreamlink = streamlink;
@@ -255,6 +247,14 @@ function streamDownload() {
   const openstreamlink = streamlink;
   window.location.href = openstreamlink;
 }
+
+function DM_Download() {
+  const openstreamlink = streamlink;
+  const openIDM = `intent:${openstreamlink}#Intent;component=idm.internet.download.manager/idm.internet.download.manager.Downloader;end`;
+  window.location.href = openIDM;
+}
+
+
 
 function copyStreamLink() {
   const linkToCopy = streamlink.toLowerCase();
