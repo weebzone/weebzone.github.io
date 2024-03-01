@@ -170,10 +170,10 @@ function toggleWidthnav(element) {
     wlcm.classList.add('active');
 }
 
-if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
-    Shery.mouseFollower();
-    Shery.makeMagnet(".magnet");
-}
+// if (!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+//     Shery.mouseFollower();
+//     Shery.makeMagnet(".magnet");
+// }
 
 
 // file name showing 
