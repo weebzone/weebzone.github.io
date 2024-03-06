@@ -231,8 +231,8 @@ const videolink = window.location.href;
 const streamlink = customEncodeURIComponent(videolink.replace("/watch/", "/dl/"));
 
 // Get the file name from the page and encode it
-const file_name = document.querySelector('.file-name #myDiv').textContent.trim();
-const encoded_name = customEncodeURIComponent(file_name);
+const cryptedname = document.querySelector('.file-name #myDiv').textContent.trim();
+const encoded_name = customEncodeURIComponent(cryptedname);
 
 // Function to open video in VLC player
 function vlc_player() {
