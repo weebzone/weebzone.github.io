@@ -731,17 +731,17 @@ table.GeneratedTable {
     }
 
     .size {
-        width: 100px;
+        width: 105px;
         text-overflow: ellipsis;
         opacity: 0.7;
     }
     .type{
-        width: 130px;
+        max-width: 75px;
         text-overflow: ellipsis;
         opacity: 0.7;
     }
     .date{
-        width: 140px;
+        max-width: 75px;
         opacity: 0.7;
     }
     .action{
