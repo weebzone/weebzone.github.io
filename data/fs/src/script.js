@@ -221,21 +221,36 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
+// Custom function for URI encoding with additional replacements
+function customEncodeURIComponent(URI) {
+    return encodeURIComponent(URI).replace(/#/g, '%23').replace(/\?/g, '%3F').replace(/&/g, '%26');
+}
 
+// Encode the video link
 const videolink = window.location.href;
-const streamlink = videolink.replace("/watch/", "/dl/");
+const streamlink = customEncodeURIComponent(videolink.replace("/watch/", "/dl/"));
 
+// Get the file name from the page and encode it
+const file_name = document.querySelector('.file-name #myDiv').textContent.trim();
+const encoded_name = customEncodeURIComponent(file_name);
+
+// Function to open video in VLC player
 function vlc_player() {
     const openstreamlink = streamlink;
+    console.log(streamlink);
     const openVlc = `vlc://${openstreamlink}`;
     window.location.href = openVlc;
 }
 
+// Function to open video in MX player
 function mx_player() {
     const openstreamlink = streamlink;
-    const openMx = `intent:${openstreamlink}#Intent;package=com.mxtech.videoplayer.ad;end`;
+    console.log(streamlink);
+    console.log(encoded_name); // Log the encoded name
+    const openMx = `intent:${streamlink}#Intent;package=com.mxtech.videoplayer.ad;S.title=${encoded_name};end`;
     window.location.href = openMx;
 }
+
 
 function n_player() {
     const openstreamlink = streamlink;
