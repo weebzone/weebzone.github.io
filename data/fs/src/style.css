@@ -831,7 +831,7 @@ table.GeneratedTable {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        min-width: 30px;
+        min-width: 50px;
         max-width: 200px;
         overflow: hidden; /* Hide any overflowing content */
         /* From https://css.glass */
