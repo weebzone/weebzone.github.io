@@ -870,27 +870,3 @@ table.GeneratedTable {
         object-fit: cover; /* Ensure the image fits without distortion */
         border-radius: 50%; /* Ensure the image itself is also circular */
     }
-
-
-    .text-container {
-        margin: auto;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin-bottom: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-    .text-container p{
-        color: rgb(255, 255, 255);
-        font-size: large;
-        font-weight: 200;
-    }
-    .image-container{
-        background-color: rgba(255, 255, 255, 0);
-    }
