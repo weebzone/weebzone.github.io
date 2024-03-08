@@ -398,7 +398,27 @@ for (var i = 0; i < containers.length; i++) {
     containers[i].style.backgroundColor = getRandomColor();
 }
 
+// Function to toggle visibility based on img src
+function toggleContainers() {
+    var imageContainers = document.querySelectorAll('.image-container');
+    var textContainers = document.querySelectorAll('.text-container');
 
+    imageContainers.forEach(function(container, index) {
+        var imgSrc = container.querySelector('img').getAttribute('src');
+        if (imgSrc.includes('http')) {
+            // container.style.display = 'block';
+            textContainers[index].style.display = 'none';
+        } else {
+            container.style.display = 'none';
+            // textContainers[index].style.display = 'block';
+        }
+    });
+}
+
+// Run the toggleContainers function once the DOM is loaded
+document.addEventListener("DOMContentLoaded", function() {
+    toggleContainers();
+});
 
 
 document.addEventListener("DOMContentLoaded", function () {
