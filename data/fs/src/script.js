@@ -9,6 +9,15 @@ let chnl_link = document.querySelectorAll('.chnl-link a')
 let abt_chnl = document.querySelector('.abt-chnl')
 let contact = document.querySelectorAll('.contact a')
 let footer = document.querySelector('footer')
+let searchBtn = document.querySelector('.searchBtn');
+let closeBtn = document.querySelector('.closeBtn');
+let searchBox = document.querySelector('.searchBox');
+let signupLink = document.querySelector('#signupLink');
+let signinLink = document.querySelector('#signinLink');
+let createPassword = document.getElementById('createPassword');
+let confirmPassword = document.getElementById('confirmPassword');
+let signupForm = document.getElementById('signupForm');
+let body = document.querySelector('body');
 
 let timer = 0
 
@@ -282,3 +291,213 @@ function copyStreamLink() {
       alert('Failed to copy link. Please try manually.');
     });
 }
+
+
+
+
+
+
+searchBtn.onclick = function () {
+    searchBox.classList.add('active');
+    closeBtn.classList.add('active');
+    searchBtn.classList.add('active');
+}
+closeBtn.onclick = function () {
+    searchBox.classList.remove('active')
+    closeBtn.classList.remove('active');
+    searchBtn.classList.remove('active');
+    clearSearchBox();
+}
+searchBtn.addEventListener('click', function() {
+    console.log('Search query:clicked');
+    searchFiles();
+});
+
+function searchFiles() {
+    var searchBox = document.querySelector('.searchBox');
+    if (searchBox.classList.contains('active')) {
+        var query = document.getElementById('search-box').value;
+        console.log('Search query:', query);
+        if (query.trim() !== '') {
+            window.location.href = '/search?query=' + encodeURIComponent(query);
+        }
+    }
+}
+
+function clearSearchBox() {
+    document.getElementById('search-box').value = '';
+}
+
+window.onload = clearSearchBox; 
+
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    const errorPopup = document.getElementById('errorPopup');
+    const errorMessage = '{{ error_message }}'; // Fetch error message from server or wherever
+
+    if (errorMessage) {
+        errorPopup.textContent = errorMessage;
+        errorPopup.style.display = 'block'; // Show pop-up
+        setTimeout(() => {
+            errorPopup.style.display = 'none'; // Hide pop-up after 3 seconds
+        }, 3000); // 3000 milliseconds = 3 seconds
+    }
+
+    signupLink.onclick = function () {
+        body.classList.add('signup');
+    }
+    signinLink.onclick = function () {
+        body.classList.remove('signup');
+    }
+
+    signupForm.addEventListener('submit', function (event) {
+        if (createPassword.value !== confirmPassword.value) {
+            event.preventDefault(); // Prevent form submission
+            showError('Passwords do not match');
+        }
+    });
+
+    function showError(message) {
+        errorPopup.textContent = message;
+        errorPopup.style.display = 'block'; // Show pop-up
+        setTimeout(() => {
+            errorPopup.style.display = 'none'; // Hide pop-up after 3 seconds
+        }, 3000); // 3000 milliseconds = 3 seconds
+    }
+});
+
+
+
+function getRandomColor() {
+    var minBrightness = 64; // Minimum brightness for the color (0-255)
+    var maxBrightness = 192; // Maximum brightness for the color (0-255)
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    var brightness = 0;
+
+    while (brightness < minBrightness || brightness > maxBrightness) {
+        color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+
+        // Calculate the brightness of the color
+        var r = parseInt(color.substr(1, 2), 16);
+        var g = parseInt(color.substr(3, 2), 16);
+        var b = parseInt(color.substr(5, 2), 16);
+        brightness = (r * 299 + g * 587 + b * 114) / 1000;
+    }
+
+    return color;
+}
+
+var containers = document.getElementsByClassName('text-container');
+for (var i = 0; i < containers.length; i++) {
+    containers[i].style.backgroundColor = getRandomColor();
+}
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const selectAllCheckbox = document.getElementById("selectAll");
+    const fileCheckboxes = document.querySelectorAll(".fileCheckbox");
+    const copyButton = document.getElementById("copySelected");
+    const downloadButton = document.getElementById("downloadSelected");
+    // Update the rows variable when the table pagination changes
+    document.querySelectorAll(".pagination-btn").forEach(btn => {
+        btn.addEventListener("click", function () {
+            setTimeout(() => {
+                rows = document.querySelectorAll(".file-name tbody tr");
+                filterRows();
+            }, 100);
+        });
+    });
+    selectAllCheckbox.addEventListener("change", function () {
+        fileCheckboxes.forEach(checkbox => {
+            checkbox.checked = selectAllCheckbox.checked;
+        });
+        updateButtonState();
+    });
+
+    fileCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener("change", function () {
+            updateButtonState();
+        });
+    });
+
+    function updateButtonState() {
+        const checkedCount = document.querySelectorAll(".fileCheckbox:checked").length;
+        if (checkedCount === 0) {
+            copyButton.disabled = true;
+            downloadButton.disabled = true;
+            copyButton.style.opacity = 0.5;
+            downloadButton.style.opacity = 0.5;
+        } else {
+            copyButton.disabled = false;
+            downloadButton.disabled = false;
+            copyButton.style.opacity = 1;
+            downloadButton.style.opacity = 1;
+        }
+        if (checkedCount === fileCheckboxes.length) {
+            selectAllCheckbox.checked = true;
+        } else if (checkedCount === 0) {
+            selectAllCheckbox.checked = false;
+            selectAllCheckbox.indeterminate = false;
+        } else {
+            selectAllCheckbox.indeterminate = true;
+        }
+    }
+
+    copyButton.addEventListener("click", function () {
+        const urls = Array.from(document.querySelectorAll(".fileCheckbox:checked"))
+            .map(checkbox => checkbox.getAttribute("data-url"))
+            .join("\n");
+        navigator.clipboard.writeText(urls);
+        alert("URLs copied to clipboard:\n" + urls);
+    });
+
+    downloadButton.addEventListener("click", function () {
+        const urls = Array.from(document.querySelectorAll(".fileCheckbox:checked"))
+            .map(checkbox => checkbox.getAttribute("dl-url"));
+        urls.forEach(url => {
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    });
+
+    const singlecopyButtons = document.querySelectorAll(".copy-url");
+
+    singlecopyButtons.forEach(button => {
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+            const url = this.closest("tr").querySelector(".filename a").getAttribute("href");
+            navigator.clipboard.writeText(url);
+            alert("URL copied to clipboard: " + url);
+        });
+    });
+
+    const singledownloadButtons = document.querySelectorAll(".download-url");
+
+    singledownloadButtons.forEach(button => {
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+            const url = this.getAttribute("data-url");
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = ""; // This is required for some browsers to initiate the download
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    });
+
+    // Disable buttons and reduce opacity on page load
+    updateButtonState();
+});
