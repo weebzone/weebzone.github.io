@@ -1,8 +1,3 @@
-image_compare:
-  enable: false
-  weight: 30
-  template: image compare
-
 # Hero
 hero:
   enable: true
@@ -49,10 +44,10 @@ hero:
   info: "**Open Source** under AGPL License."
 
 # Feature Grid
-feature_grid:
+featureGrid:
   enable: true
   weight: 25
-  template: feature grid
+  template: feature_grid
 
   title: Features about WZML-X ?
   subtitle: WZML-X is a highly customizable Telegram Bot built to fill up the Gaps within using different services & accelerate performance. Yet, with the default state you can deploy and publish your own WZML-X bot in a matter of minutes. Check out some core features below.
@@ -92,3 +87,8 @@ feature_grid:
     - title: Custom Themes
       icon: palette
       description: Built with Custom Themes and also supports self-made themes efficiently, It allows for a familiar, flexible, and intuitive appearance. Easily customise your WZML-X based bot via custom variables.
+
+imageCompare:
+  enable: false
+  weight: 30
+  template: image compare
