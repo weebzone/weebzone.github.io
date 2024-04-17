@@ -89,7 +89,7 @@ enableGitInfo = true
         # searchSectionsIndex = []
         
     [params.feedback]
-        enabled = true
+        enabled = false
         emoticonTpl = true
         eventDest = ["plausible","google"]
         emoticonEventName = "Feedback"
