@@ -29,9 +29,6 @@ enableGitInfo = true
     [markup.goldmark.parser.attribute]
       block = true
 
-[markup.goldmark.renderer] 
-    unsafe = true 
-
 [params]
   google_fonts = [
     ["Inter", "300, 400, 600, 700"],
