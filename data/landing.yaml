@@ -1,4 +1,4 @@
-imageCompare:
+image_compare:
   enable: false
   weight: 30
   template: image compare
@@ -49,7 +49,7 @@ hero:
   info: "**Open Source** under AGPL License."
 
 # Feature Grid
-featureGrid:
+feature_grid:
   enable: true
   weight: 25
   template: feature grid
