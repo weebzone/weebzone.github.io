@@ -60,7 +60,7 @@ enableGitInfo = true
         # gitinfo
         repoURL         = "https://github.com/weebzone/weebzone.github.io"  # Git repository URL for your site [support for GitHub, GitLab, and BitBucket]
         repoBranch      = "main"                              # Name of your Git repository branch
-        editPage        = true                                # enable 'Edit this page' feature - default false
+        editPage        = false                                # enable 'Edit this page' feature - default false
         lastMod         = true                                # enable 'Last modified' date on pages - default false
         lastModRelative = true                                # format 'Last modified' time as relative - default true
 
@@ -124,7 +124,7 @@ enableGitInfo = true
         ]
         
 [[menu.primary]] 
-    name = "Documentation" 
+    name = "Docs" 
     url = "/docs/"
     identifier = "docs"
     weight = 10
@@ -135,8 +135,8 @@ enableGitInfo = true
     identifier = "community"
     weight = 20
     
-#[[menu.primary]]
-#    name  = ""
-#    url = ""
-#    identifier = ""
-#    weight = 30
+[[menu.primary]]
+    name  = "About"
+    url = "/about/"
+    identifier = "about"
+    weight = 30
