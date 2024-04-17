@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'WZML-X Docs | A PowerPacked Telegram Multi-Utility Bot'
 contentDir = "content"
 enableEmoji = true
+enableGitInfo = true
 
 [module]
     [module.hugoVersion]
@@ -18,14 +19,7 @@ enableEmoji = true
 [markup.goldmark.renderer] 
     unsafe = true 
 
-[[menu.primary]] 
-    name = "Docs" 
-    url = "/docs/"
-    identifier = "docs"
-    weight = 5
-
 [params]
-
   google_fonts = [
     ["Inter", "300, 400, 600, 700"],
     ["Fira Code", "500, 700"]
@@ -33,6 +27,7 @@ enableEmoji = true
 
   sans_serif_font = "Inter"
   secondary_font  = "Inter"
+  mono_font       = "Fira Code"
 
     [params.footer]
         copyright = "© :YEAR: WZML-X. All Rights Reserved"
@@ -40,18 +35,21 @@ enableEmoji = true
 
     [params.social]
         github = "weebzone/WZML-X"
+        #twitter = ""
+        #instagram = ""
+        #rss = true
 
     [params.docs]
-        title           = "WZML-X Guide & Docs"                        # default html title for documentation pages/sections
-        # pathName        = "docs"                            # path for documentation site | default "docs"
-        themeColor      = "cyan"                              # (optional) - Set theme accent colour. Options include: blue (default), green, red, yellow, emerald, cardinal, magenta, cyan
-        darkMode        = true                                # enable dark mode option? default false
-        prism           = true                                # enable syntax highlighting via Prism
-        # prismTheme      = "lotusdocs"                         # (optional) - Set theme for PrismJS. Options include: lotusdocs (default), solarized-light, twilight, lucario
+        title           = "WZML-X Guide & Docs"  # default html title for documentation pages/sections
+        # pathName        = "docs"       # path for documentation site | default "docs"
+        themeColor      = "cyan"         # (optional) - Set theme accent colour. Options include: blue (default), green, red, yellow, emerald, cardinal, magenta, cyan
+        darkMode        = true           # enable dark mode option? default false
+        prism           = true           # enable syntax highlighting via Prism
+        prismTheme      = "twilight"     # (optional) - Set theme for PrismJS. Options include: lotusdocs (default), solarized-light, twilight, lucario
 
         # gitinfo
         repoURL         = "https://github.com/weebzone/weebzone.github.io"  # Git repository URL for your site [support for GitHub, GitLab, and BitBucket]
-        repoBranch      = "main"                           # Name of your Git repository branch
+        repoBranch      = "main"                              # Name of your Git repository branch
         editPage        = true                                # enable 'Edit this page' feature - default false
         lastMod         = true                                # enable 'Last modified' date on pages - default false
         lastModRelative = true                                # format 'Last modified' time as relative - default true
@@ -78,6 +76,57 @@ enableEmoji = true
 
         # Link behaviour
         intLinkTooltip  = true                                # Enable a tooltip for internal links that displays info about the destination? default false
-        # extLinkNewTab   = false                               # Open external links in a new Tab? default true
+        extLinkNewTab   = false                               # Open external links in a new Tab? default true
         logoLinkURL = "https://wzmlx.mysterysd.in"
+        
+    [params.flexsearch]
+        enabled             = true
+        # tokenize            = "full"
+        optimize            = true
+        cache               = 100
+        # minQueryChar        = 3 # default is 0 (disabled)
+        # maxResult           = 5 # default is 5
+        # searchSectionsIndex = []
+        
+    [params.feedback]
+        enabled = true
+        emoticonTpl = true
+        eventDest = ["plausible","google"]
+        emoticonEventName = "Feedback"
+        positiveEventName = "Positive Feedback"
+        negativeEventName = "Negative Feedback"
+        positiveFormTitle = "What did you like?"
+        negativeFormTitle = "What went wrong?"
+        successMsg = "Thank you for helping to improve Lotus Docs' documentation!"
+        errorMsg = "Sorry! There was an error while attempting to submit your feedback!"
+        positiveForm = [
+          ["Accurate", "Accurately describes the feature or option."],
+          ["Solved my problem", "Helped me resolve an issue."],
+          ["Easy to understand", "Easy to follow and comprehend."],
+          ["Something else"]
+        ]
+        negativeForm = [
+          ["Inaccurate", "Doesn't accurately describe the feature or option."],
+          ["Couldn't find what I was looking for", "Missing important information."],
+          ["Hard to understand", "Too complicated or unclear."],
+          ["Code sample errors", "One or more code samples are incorrect."],
+          ["Something else"]
+        ]
+        
+[[menu.primary]] 
+    name = "Documentation" 
+    url = "/docs/"
+    identifier = "docs"
+    weight = 10
 
+[[menu.primary]]
+    name  = "Community"
+    url = "https://t.me/WZML_Support"
+    identifier = "community"
+    weight = 20
+    
+#[[menu.primary]]
+#    name  = ""
+#    url = ""
+#    identifier = ""
+#    weight = 30

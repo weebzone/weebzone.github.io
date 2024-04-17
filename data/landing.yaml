@@ -1,7 +1,7 @@
 # Hero
 hero:
   enable: true
-  weight: 5
+  weight: 10
   template: hero
 
   backgroundImage:
@@ -13,8 +13,8 @@ hero:
   badge:
     text: v1.3.3
     color: success # primary, secondary, success, danger, warning, info, light, dark
-    pill: true # boolean
-    soft: true # boolean
+    pill: true
+    soft: true
 
   titleLogo:
     path: "images/logos"
@@ -27,11 +27,11 @@ hero:
   info: "**Open Source** under AGPL License."
 
   image:
-    path: "images" # path to image under configured assets directory. default 'images'
-    filename: "lotus_docs_screenshot.png" # filename of your hero image (including file extension)
-    alt: "WZML-X Bot Screenshot" # Optional but recommended
+    path: "images" # default 'images'
+    filename: "lotus_docs_screenshot.png" # (including file extension)
+    alt: "WZML-X Bot Screenshot"
     boxShadow: true # default 'false' (excludes .svg images)
-    rounded: true # round the image corners? default 'false' (excludes .svg images)
+    rounded: true # default 'false' (excludes .svg images)
 
   ctaButton:
     icon: rocket_launch
@@ -42,3 +42,51 @@ hero:
     btnText: "Deploy Now"
     url: "https://github.com/weebzone/WZML-X"
 
+featureGrid:
+  enable: true
+  weight: 20
+  template: feature grid
+
+  title: Features about WZML-X
+  subtitle: WZML-X is a highly customizable Telegram Bot built to fill up the Gaps within using different services & accelerate performance. Yet, with the default state you can deploy and publish your own WZML-X bot in a matter of minutes. Check out some core features below.
+
+  items:
+    - title: Fast & Smooth
+      icon: speed
+      description: Telegram Bot is Build in python asynchronous architecture to boost up perfection and speed enhancers like uvloop & uv !
+
+    - title: User Friendly
+      icon: settings_accessibility
+      description: Bot is highly made simpler with minimal vars to start up and buttons interface. Choose the settings that best suit you from user and owner settings.
+
+    - title: Secure & Efficient 
+      icon: lock
+      description: WZML-X never use or store any of the user's data. It uses Custom cryptography fernet encryption to protect user's privacy to fullest.
+
+    - title: Rich Features
+      icon: discover_tune
+      description: WZML-X is highly rich in various features to ease out users experience. Many features are configurable via optional parameters & variables.
+      ctaLink:
+        text: learn more
+        url: /docs/
+
+    - title: Deploy to Various Platforms
+      icon: change_history
+      description: Deploy to Heroku, VPS or any other worker or web services in minutes. Active group of community to help other users for any help in configuration of different sites.
+
+    - title: Custom Plugins ( RSS, QBit Search )
+      icon: extension
+      description: Bot also supports various other utilities to make use in single bot and state as multi-tasking with crash proof structure.
+
+    - title: Multilingual Support (Upcoming)
+      icon: translate
+      description: WZML-X will supports Multilingual Mode. It will added soon, still in development !
+
+    - title: Custom Themes
+      icon: palette
+      description: Built with Custom Themes and also supports self-made themes efficiently, It allows for a familiar, flexible, and intuitive appearance. Easily customise your WZML-X based bot via custom variables.
+
+imageCompare:
+  enable: false
+  weight: 30
+  template: image compare
