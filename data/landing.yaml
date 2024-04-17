@@ -18,13 +18,12 @@ hero:
 
   titleLogo:
     path: "images/logos"
-    filename: "title_logo.png"
+    filename: "brand_logo.jpg"
     alt: "WZML-X Logo"
     height: 80px
 
   title: "WZML-X"
-  subtitle: A lightweight, **modern documentation** theme for Hugo. Easily customised for building **fast**, **secure**, and **SEO-friendly** documentation sites.
-  info: "**Open Source** under AGPL License."
+  subtitle: A Super Enhanced Telegram bot which can download torrents, mega, google drive links, telegram file, direct links and all yt-dlp sites, upload to google drive, telegram cloud, rclone clouds or ddl servers. Made with Pyrogram in Python by WZML-X Devs.
 
   image:
     path: "images" # default 'images'
@@ -42,12 +41,14 @@ hero:
     btnText: "Deploy Now"
     url: "https://github.com/weebzone/WZML-X"
 
+  info: "**Open Source** under AGPL License."
+
 featureGrid:
   enable: true
   weight: 20
   template: feature grid
 
-  title: Features about WZML-X
+  title: Features about WZML-X ?
   subtitle: WZML-X is a highly customizable Telegram Bot built to fill up the Gaps within using different services & accelerate performance. Yet, with the default state you can deploy and publish your own WZML-X bot in a matter of minutes. Check out some core features below.
 
   items:
