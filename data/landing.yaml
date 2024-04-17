@@ -1,3 +1,8 @@
+imageCompare:
+  enable: false
+  weight: 30
+  template: image compare
+
 # Hero
 hero:
   enable: true
@@ -46,7 +51,7 @@ hero:
 # Feature Grid
 featureGrid:
   enable: true
-  weight: 20
+  weight: 25
   template: feature grid
 
   title: Features about WZML-X ?
@@ -87,9 +92,3 @@ featureGrid:
     - title: Custom Themes
       icon: palette
       description: Built with Custom Themes and also supports self-made themes efficiently, It allows for a familiar, flexible, and intuitive appearance. Easily customise your WZML-X based bot via custom variables.
-
-# Image compare
-imageCompare:
-  enable: false
-  weight: 30
-  template: image compare
