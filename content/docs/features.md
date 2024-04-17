@@ -12,4 +12,4 @@ categories: [""]
 ---
 
 ## Growing Deeper
-- Retry
+- Retry...
