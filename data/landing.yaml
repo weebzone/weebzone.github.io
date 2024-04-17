@@ -20,15 +20,15 @@ hero:
     path: "images/logos"
     filename: "brand_logo.jpg"
     alt: "WZML-X Logo"
-    height: 80px
+    height: 50px
 
   title: "WZML-X"
   subtitle: A Super Enhanced Telegram bot which can download torrents, mega, google drive links, telegram file, direct links and all yt-dlp sites, upload to google drive, telegram cloud, rclone clouds or ddl servers. Made with Pyrogram in Python by WZML-X Devs.
 
   image:
     path: "images" # default 'images'
-    filename: "lotus_docs_screenshot.png" # (including file extension)
-    alt: "WZML-X Bot Screenshot"
+    filename: "tg_bot.jpeg" # (including file extension)
+    alt: "Multi-Utility Tg Bot"
     boxShadow: true # default 'false' (excludes .svg images)
     rounded: true # default 'false' (excludes .svg images)
 
