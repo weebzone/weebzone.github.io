@@ -1,6 +1,6 @@
 ---
 weight: 830
-title: "Setup `config.env`"
+title: "Setup config.env"
 description: "Setup configurations to modify specific part of the bot as per requirements."
 author: "SilentDemonSD"
 icon: fact_check

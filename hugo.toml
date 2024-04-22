@@ -130,7 +130,7 @@ enableGitInfo = true
     weight = 10
     
 [[menu.primary]]
-    name  = "About"
-    url = "/about/"
-    identifier = "about"
+    name  = "Community"
+    url = "https://telegram.me/WZML_Support"
+    identifier = "community"
     weight = 20

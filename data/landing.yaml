@@ -34,7 +34,7 @@ hero:
   ctaButton:
     icon: rocket_launch
     btnText: "Get Started"
-    url: "/docs/"
+    url: "https://wzmlx.mysterysd.in/docs/"
   cta2Button:
     icon: construction
     btnText: "Deploy Now"
