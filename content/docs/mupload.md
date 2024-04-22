@@ -1,9 +1,9 @@
 ---
-weight: 400
-title: "Variables Desp"
-description: "Management of different Variables and know full strength of it."
+weight: 900
+title: "Multi-Upload"
+description: "Guide about how to use Multi Upload System & its routes."
 author: "SilentDemonSD"
-icon: widgets
+icon: select_window
 draft: false
 ---
 

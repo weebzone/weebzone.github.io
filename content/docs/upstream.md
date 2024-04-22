@@ -1,9 +1,9 @@
 ---
-weight: 400
-title: "Variables Desp"
-description: "Management of different Variables and know full strength of it."
+weight: 1000
+title: "SetUp Upstream"
+description: "Setting Up Upstream for different platforms and its Use case."
 author: "SilentDemonSD"
-icon: widgets
+icon: ads_click
 draft: false
 ---
 

@@ -1,9 +1,9 @@
 ---
-weight: 400
-title: "Variables Desp"
-description: "Management of different Variables and know full strength of it."
+weight: 841
+title: "Heroku"
+description: "How to deploy WZML-X on Heroku hosting platform"
 author: "SilentDemonSD"
-icon: widgets
+icon: filter_drama
 draft: false
 ---
 

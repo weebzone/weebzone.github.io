@@ -1,9 +1,9 @@
 ---
-weight: 400
-title: "Variables Desp"
-description: "Management of different Variables and know full strength of it."
+weight: 840
+title: "Cloud Platforms"
+description: "How to deploy WZML-X on various cloud hosting platforms"
 author: "SilentDemonSD"
-icon: widgets
+icon: cloud_upload
 draft: false
 ---
 

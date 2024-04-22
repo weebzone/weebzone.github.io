@@ -1,4 +1,3 @@
-# Hero
 hero:
   enable: true
   weight: 10
@@ -43,7 +42,6 @@ hero:
 
   info: "**Open Source** under AGPL License."
 
-# Feature Grid
 featureGrid:
   enable: true
   weight: 25
